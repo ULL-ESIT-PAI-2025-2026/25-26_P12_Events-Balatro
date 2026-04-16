@@ -51,7 +51,7 @@ es un juego *roguelike* de construcción de mazos basado en
 [el póker](http://en.wikipedia.org/wiki/Poker), 
 en el que en cada partida se juegan manos de póker para conseguir puntos 
 (“chips”) suficientes en cada ronda, mientras se compran mejoras (especialmente *jokers*) que multiplican tu puntuación. 
-Su interés viene de cómo se combinan manos, cartas modificadas y jokers para crear combos cada vez más explosivos dentro de una partida.
+Su atractivo viene de cómo se combinan manos, cartas modificadas y jokers para crear combos cada vez más explosivos dentro de una partida.
 
 Cada partida se divide en niveles llamados *Small Blind*, *Big Blind* y *Boss Blind*.
 Cada nivel exige alcanzar un número objetivo de chips jugando un número limitado de manos y descartes. 
@@ -68,7 +68,7 @@ La baraja francesa está dividida en cuatro palos (*suits*), dos de color rojo y
 * ♣ Clubs (tréboles).
 
 Cada palo está formado por 13 cartas, de las cuales 9 son numerales y 4 literales. 
-Se ordenan de menor a mayor "rango" de la siguiente forma: A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K. 
+Se ordenan de menor a mayor “rango” de la siguiente forma: A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K. 
 Las cartas con letras (figuras), se llaman Jack (J), Queen (Q), King (K) y Ace (A, *As*).
 Dependiendo del juego, un As puede ser más alto que el Rey o más bajo que 2.
 
@@ -83,8 +83,8 @@ cartas para formar una
 [mano de póker](https://en.wikipedia.org/wiki/List_of_poker_hands)
 (pareja, color, full, etc. o *One pair*, *Flush*, *Full House* de acuerdo a sus denominaciones en inglés). 
 
-Las siguientes son las posibles manos en el póquer, en orden creciente de valor e indicando la puntuación
-(“chips” y “multiplicador”) 
+Las siguientes son las posibles manos en el póquer, en orden creciente de valor e indicando su correspondiente puntuación
+(“chips” y “multiplicador”) en el Balatro:
 * *High Card*: la carta de mayor valor numérico. Chips: 5 Mult: 1 
 * *Pair* (Pareja): dos cartas con el mismo valor. Chips: 10 Mult: 2 
 * *Two Pair* (Doble par): dos pares de cartas con el mismo valor. Chips: 20 Mult: 2
@@ -109,12 +109,12 @@ para jugar y sobre todo, conocer el juego.
 Mini Balatro está siendo desarrollada por D. Fabián G. Lence, estudiante del grado en informática en el marco
 de su Trabajo Fin de Grado.
 
-En la aplicación el botón *Hand Info* muestra en pantalla los tipos de manos del póker que utiliza así como el
+En la aplicación el botón `Hand Info` muestra en pantalla los tipos de manos del póker que utiliza así como el
 valor de cada una de ellas, de modo que para empezar, basta con saber reconocer las jugadas básicas de póker 
 y tratar de hacer siempre la mano más valiosa con las cartas que se tiene.
 
 En esta práctica se propone desarrollar en Vanilla TypeScript una primera aproximación simplificada del Blatro a través de una
-aplicación web web en formato SPA (*Single Page Application*) conforme al patrón MVC.
+aplicación web en formato SPA (*Single Page Application*) conforme al patrón MVC.
 
 ### Indicaciones de caracter general
 El programa que desarrolle ha de ser orientado a objetos y utilizar una arquitectura MVC.
@@ -164,14 +164,14 @@ como otra que mostrará el diagrama UML de las clases que intervienen en su prog
 Tenga en cuenta las siguientes especificaciones a la hora de diseñar su programa:
 
 Aunque este documento está escrito en español, se propone que los identificadores 
-que se usen en el código TypeScript utilicen la terminología en inglés para las entidades que ha de 
+que se usen en el código utilicen la terminología en inglés para las entidades que ha de 
 modelar en su programa: cartas (*cards*), mazo de cartas (*deck*), nombres de los palos (*suits*), etc.
 
 Intente que su aplicación imite en la medida de lo posible el aspecto y funcionalidades de
 [Mini Balatro](https://alu0101549491.github.io/TFG-Fabian-Gonzalez-Lence/3-MiniBalatro/)
 que se tomará como referencia.
 
-Su página debería dividirse en las 5 secciones que muestra la aplicación de referencia:
+Su página debería dividirse en las 6 secciones que muestra la aplicación de referencia:
 * Bloque 1: Level, Money, Round, Deck
 * Bloque 2: Jokers
 * Bloque 3: Objetivo de puntos
@@ -183,8 +183,8 @@ Utilice todos aquellos elementos HTML que le resulten necesarios y use
 Bulma para dotar de estilo a esos elementos.
 Haga que el color de fondo de su página sea el color violeta característico de las “páginas ULL”, en lugar del
 color azul oscuro que muestra la aplicación de referencia.
-Utilice asimismo la *tipografía ULL* para su aplicación.
-No utilice en su aplicación código CSS salvo el procedente de la carga de Bulma.
+Utilice asimismo la “tipografía ULL” para su aplicación.
+No utilice en su aplicación otro código CSS que el procedente de la carga de Bulma.
 
 Su aplicación solo implementará el primer nivel (*Small Blind*) del juego.
 * Se reparten 8 cartas al inicio del juego
