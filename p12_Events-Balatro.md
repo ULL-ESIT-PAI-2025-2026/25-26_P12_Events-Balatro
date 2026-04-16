@@ -74,7 +74,9 @@ mientras que en el segundo ha de incluir un enlace (véase el apartado *Presenta
 Haga que el fichero `README.md` de su proyecto sea la primera página de la documentación del mismo.
 
 ### El juego Balatro
-Balatro es un juego *roguelike* de construcción de mazos basado en póker en el que en cada partida se juegan manos de póker para conseguir puntos 
+Balatro es un juego *roguelike* de construcción de mazos basado en 
+[el poker](http://en.wikipedia.org/wiki/Poker), 
+en el que en cada partida se juegan manos de póker para conseguir puntos 
 (“chips”) suficientes en cada ronda, mientras se compran mejoras (especialmente *jokers*) que multiplican tu puntuación. 
 Su interés viene de cómo se combinan manos, cartas modificadas y jokers para crear combos cada vez más explosivos dentro de una partida.
 
@@ -99,25 +101,34 @@ Dependiendo del juego, un As puede ser más alto que el Rey o más bajo que 2.
 
 Si se quiere definir una clase para representar una carta de juego, 
 es obvio cuáles deben ser los atributos mínimos imprescindibles: valor, palo y la imagen asociada con la carta.
-El directorio `img` de este proyecto contiene ficheros gráficos correspondientes a todas las cartas de la baraja francesa.
+El directorio `public/img` de este proyecto contiene ficheros gráficos correspondientes a 
+todas las cartas de la baraja francesa, que puede Ud. usar en su desarrollo.
+Siéntase libre de usar otras imágenes si lo prefiere.
 
 En cada turno el jugador puede descartar algunas cartas para robar nuevas o seleccionar hasta cinco 
-cartas para formar una mano de póker (pareja, color, full, etc.). 
+cartas para formar una 
+[mano de póker](https://en.wikipedia.org/wiki/List_of_poker_hands)
+(pareja, color, full, etc. o *One pair*, *Flush*, *Full House* de acuerdo a sus denominaciones en inglés). 
 Cada mano jugada se traduce en una puntuación según el tipo de jugada (base de “chips” y “multiplicador”) 
 más el valor de las cartas individuales; la puntuación total se acumula contra el objetivo de chips del blind actual.
+
+En cada blind el jugador tiene un número fijo de manos que puedes jugar y un número de descartes; 
+si los chips acumulados alcanzan el objetivo, el blind se considera superado y se pasa a la siguiente etapa.
+Si el juagador acaba sus manos sin alcanzar el objetivo, la partida termina. 
+
+Utilice la aplicación
+[Mini Balatro](https://alu0101549491.github.io/TFG-Fabian-Gonzalez-Lence/3-MiniBalatro/)
+para jugar y sobre todo, conocer el juego.
+El botón *Hand Info* de la aplicación muestra en pantalla los tipos de manos del poker que utiliza así como el
+valor de cada una de ellas, de modo que para empezar, basta con saber reconocer las jugadas básicas de póker 
+y tratar de hacer siempre la mano más valiosa con las cartas que se tiene.
+
 
 ### El juego del Poker
 En esta práctica se propone desarrollar una aplicación web SPA 
 [(Single Page Application)](https://en.wikipedia.org/wiki/Single-page_application)
 `poker.ts`
 La aplicación se diseñará conforme al patrón Modelo Vista Controlador.
-
-Tendrá que representar 
-[cartas de la baraja francesa](https://en.wikipedia.org/wiki/Standard_52-card_deck), 
-mazos de cartas, manos y jugadas del Póquer.  Consulte
-[Wikipedia](http://en.wikipedia.org/wiki/Poker), 
-para un conocimiento básico de este juego, en caso de que no lo conozca.
-Este documento explica todo lo que se precisa para la aplicación que ha de realizar.
 
 A pesar de que este documento está escrito en español, se propone que los identificadores 
 que se usen en el código TypeScript utilicen la terminología en inglés para las entidades que ha de 
@@ -126,21 +137,6 @@ modelar en su programa: cartas (*cards*), mazo de cartas (*deck*), etc.
 ### La clase *Card*
 Se propone desarrollar en el módulo `card.ts` una clase `Card` que permita representar cartas de la barja francesa.
 
-
-
-
-```
-Ace of Diamonds
-9 of Hearts
-Jack of Spades
-```
-
-Y debería poderse escribir:
-
-```typescript
-const jackOfHearts = new Card(HEARTS, JACK);
-console.log(jackOfHearts);  // -> Jack of Hearts
-```
 
 Cualquier implementación que se elija para los atributos ha de permitir comparar cartas para determinar cuál tiene un valor o palo más alto.
 El orden de las cartas no es obvio. 
