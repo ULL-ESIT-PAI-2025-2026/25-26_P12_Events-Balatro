@@ -56,15 +56,10 @@ Si la jugadora supera el objetivo antes de quedarse sin manos, gana ese blind y 
 Se juega con un
 [mazo estándar de 52 cartas](https://en.wikipedia.org/wiki/Standard_52-card_deck)
 de la baraja francesa que está dividida en cuatro palos (*suits*), dos de color rojo y dos de color negro:
-
-♠ Spades (picas).
-
-♥ Hearts (corazones).
-
-♦ Diamonds (diamantes).
-
-♣ Clubs (tréboles).
-
+* ♠ Spades (picas).
+* ♥ Hearts (corazones).
+* ♦ Diamonds (diamantes).
+* ♣ Clubs (tréboles).
 Cada palo está formado por 13 cartas, de las cuales 9 son numerales y 4 literales. 
 Se ordenan de menor a mayor “rango” de la siguiente forma: A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K. 
 Las cartas con letras (figuras), se llaman Jack (J), Queen (Q), King (K) y Ace (A, *As*).
