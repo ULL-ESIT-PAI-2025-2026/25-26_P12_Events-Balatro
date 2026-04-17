@@ -3,6 +3,9 @@
 ### Factor de ponderación: 10 
 ### Estimación de horas de trabajo para realizar la práctica: 10
 
+### Examen de la asignatura
+Tenga en cuenta que esta es la primera de las dos prácticas que componen el examen final de la asignatura.
+
 
 ### Objetivos
 Los objetivos de esta tarea son poner en práctica:
