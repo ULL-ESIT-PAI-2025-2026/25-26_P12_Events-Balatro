@@ -11,7 +11,7 @@ Los objetivos de esta tarea son poner en práctica:
 * Programación orientada a eventos en TypeScript.
 * Programación Gráfica en TypeScript usando la API Canvas.
 * Metodologías y conceptos de diseño y Programación Orientada a Objetos en TypeScript.
-* Principios y Buenas prácticas de programación Orientada a Objetos.
+* Principios y buenas prácticas de programación Orientada a Objetos.
 * Algunos de los patrones de diseño que se han estudiado en la asignatura.
 * El uso de elementos HTML.
 
@@ -29,38 +29,33 @@ que se tendrán en cuenta a la hora de evaluar esta práctica:
 * Se acredita conocimiento y puesta en práctica de principios y buenas prácticas de programación orientada a objetos
 * Saber corregir bugs en sus programas utilizando un depurador 
 * Deben usarse estructuras de datos adecuadas para representar los diferentes elementos que intervienen en el problema
-* Ser capaz de desarrollar programas simples en TypeScript en el entorno Linux de la VM de la asignatura usando
-  `ts-node`
+* Acreditar el conocimiento las etiquetas de 
+  [JSDoc](https://jsdoc.app/)
 * Ser capaz de generar documentación para sus programas TS utilizando
   [TypeDoc](https://typedoc.org/)
   y de visualizar dicha documentación en un servidor web
-* El alumnado debe ser capaz de resolver problemas tanto en JS como en TS en la plataforma Exercism subiendo sus soluciones a la misma
 * Acreditar su capacidad para configurar y utilizar 
   [ESLint](https://eslint.org/)
 y que es capaz de trabajar con la misma en Visual Studio Code
-* Acreditar que conoce las etiquetas de 
-  [JSDoc](https://jsdoc.app/)
 * Se comprobará que el código que el alumnado escribe se adhiere a las reglas de las Guías de Estilo de Google
   para Javascript y/o TypeScript
 * Todas las prácticas realizadas hasta la fecha, incluída la que se presenta para su evaluación, se encuentran alojadas en repositorios privados de GitHub.
-* Acreditar que es capaz de editar ficheros de forma remota en su VM usando Visual Studio Code
 
 ### El juego Balatro
 [Balatro](https://en.wikipedia.org/wiki/Balatro)
-es un juego *roguelike* de construcción de mazos basado en 
-[el póker](http://en.wikipedia.org/wiki/Poker), 
+es un juego *roguelike* de construcción de mazos basado en el
+[póker](http://en.wikipedia.org/wiki/Poker), 
 en el que en cada partida se juegan manos de póker para conseguir puntos 
-(“chips”) suficientes en cada ronda, mientras se compran mejoras (especialmente *jokers*) que multiplican tu puntuación. 
-Su atractivo viene de cómo se combinan manos, cartas modificadas y jokers para crear combos cada vez más explosivos dentro de una partida.
+(“chips”) suficientes en cada ronda, mientras se compran mejoras (especialmente *jokers*) que multiplican la puntuación. 
+Su atractivo viene de cómo se combinan manos, cartas modificadas y jokers para crear combinaciones dentro de una partida.
 
 Cada partida se divide en niveles llamados *Small Blind*, *Big Blind* y *Boss Blind*.
 Cada nivel exige alcanzar un número objetivo de chips jugando un número limitado de manos y descartes. 
 Si la jugadora supera el objetivo antes de quedarse sin manos, gana ese blind y avanza en el juego.
 
-Se juega con un 
-[mazo de 52 cartas](https://en.wikipedia.org/wiki/Standard_52-card_deck)
-de póker estándar (baraja francesa).
-La baraja francesa está dividida en cuatro palos (*suits*), dos de color rojo y dos de color negro:
+Se juega con un
+[mazo estándar de 52 cartas](https://en.wikipedia.org/wiki/Standard_52-card_deck)
+de la baraja francesa que está dividida en cuatro palos (*suits*), dos de color rojo y dos de color negro:
 
 * ♠ Spades (picas).
 * ♥ Hearts (corazones).
@@ -74,7 +69,7 @@ Dependiendo del juego, un As puede ser más alto que el Rey o más bajo que 2.
 
 Si se quiere definir una clase para representar una carta de juego, 
 es obvio cuáles deben ser los atributos **mínimos** imprescindibles: valor, palo y la imagen asociada con la carta.
-El directorio `public/img` de este proyecto contiene ficheros gráficos correspondientes a 
+El directorio `public/img/SVG-cards-1.3` de este proyecto contiene ficheros gráficos correspondientes a 
 todas las cartas de la baraja francesa, que puede Ud. usar en su desarrollo.
 Siéntase libre de usar otras imágenes si lo prefiere.
 
