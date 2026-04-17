@@ -18,7 +18,40 @@ Los objetivos de esta tarea son poner en práctica:
 * Algunos de los patrones de diseño que se han estudiado en la asignatura.
 * El uso de elementos HTML.
 
-### Rúbrica de evaluacion del ejercicio
+### Revise cuidadosamente los elementos de esta rúbrica puesto que será la que se utilice para la evaluación del examen 
+REVISAR
+
+1. Tanto el ejercicio propuesto para esta práctica como los que se propondrán en la sesión de evaluación
+   han de entregarse en la correspondiente tarea del aula virtual a través de un repositorio privado de
+   [GitHub](https://github.com/)
+1. Su proyecto ha de incluir un fichero `README.md` con indicaciones precisas para compilar (*build*) y desplegar su aplicación en una 
+   [página GitHub](https://pages.github.com/)
+   asociada con el repositorio del proyecto
+1. Su proyecto ha de incluir un fichero de configuración del flujo de desarrollo que permita automatizar mediante 
+   [GitHub Actions](https://github.com/features/actions)
+   la ejecución de las diferentes tareas del proyecto
+1. La aplicación debe adherirse al paradigma de programación orientada a objetos e implementarse de acuerdo con la arquitectura MVC, 
+   aplicando fundamentos, principios y buenas prácticas de OOP
+1. La estructura de clases de su aplicación se mostrará mediante un diagrama UML expuesto a través de una página GitHub del proyecto
+1. El comportamiento de su aplicación deberá ajustarse a lo descrito en este documento
+1. Los estilos de su aplicación han de implementarse utilizando el Framework
+   [Bulma](https://bulma.io/)
+1. Los métodos y clases de su aplicación estarán convenientemente documentados utilizando etiquetas
+   [JSDoc](https://jsdoc.app/)
+   y la documentación de la misma se generará utilizando
+   [TypeDoc](https://typedoc.org/)
+   y se alojará en una página GitHub de su proyecto
+1. La aplicación ha de contener tests unitarios realizados con 
+   [Jest](https://jestjs.io/)
+   para alguno(s) de los métodos que se desarrollen para su aplicación
+1. Mediante el uso de 
+   [typescript-eslint](https://typescript-eslint.io/)
+   se comprobará que el código de su aplicación se adhiere a las reglas de las Guías de Estilo de Google para 
+   [TypeScript](https://google.github.io/styleguide/tsguide.html)
+   y
+   [JavaScript](https://google.github.io/styleguide/jsguide.html)
+
+
 Se señalan a continuación los aspectos más relevantes (la lista no es exhaustiva)
 que se tendrán en cuenta a la hora de evaluar esta práctica:
 * Se valorará la realización de las diferentes tareas que se proponen
@@ -39,7 +72,7 @@ que se tendrán en cuenta a la hora de evaluar esta práctica:
   y de visualizar dicha documentación en un servidor web
 * Acreditar su capacidad para configurar y utilizar 
   [ESLint](https://eslint.org/)
-y que es capaz de trabajar con la misma en Visual Studio Code
+  y que es capaz de trabajar con la misma en Visual Studio Code
 * Se comprobará que el código que el alumnado escribe se adhiere a las reglas de las Guías de Estilo de Google
   para Javascript y/o TypeScript
 * Todas las prácticas realizadas hasta la fecha, incluída la que se presenta para su evaluación, se encuentran alojadas en repositorios privados de GitHub.
@@ -102,7 +135,8 @@ Si el juagador acaba sus manos sin alcanzar el objetivo, la partida termina.
 Utilice la aplicación
 [Mini Balatro](https://alu0101549491.github.io/TFG-Fabian-Gonzalez-Lence/3-MiniBalatro/)
 para jugar y sobre todo, conocer el juego.
-La aplicación contiene un enlace “How To Play” que explica la dinámica del juego.
+La aplicación contiene un enlace “How To Play” en el que se explica la dinámica del juego, así como el cálculo
+de las puntuaciones de cada mano.
 Mini Balatro está siendo desarrollada por D. Fabián G. Lence, estudiante del grado en informática en el marco
 de su Trabajo Fin de Grado.
 
@@ -181,6 +215,10 @@ Bulma para dotar de estilo a esos elementos.
 Haga que el color de fondo de su página sea el color violeta característico de las “páginas ULL”, en lugar del
 color azul oscuro que muestra la aplicación de referencia.
 Utilice asimismo la “tipografía ULL” para su aplicación.
+Para el resto de colores de la aplicación que ha de imitar, puede utilizar la herramienta
+[Image Color Picker](https://imagecolorpicker.com/)
+o alguma similar para determinar los colores de la aplicación de referencia (fondo, bordes, colores en
+tipografías) y adaptarlos para usarlos a través de una personalización de Bulma usando Saas.
 No utilice en su aplicación otro código CSS que el procedente de la carga de Bulma.
 
 Su aplicación solo implementará el primer nivel (*Small Blind*) del juego.
@@ -194,7 +232,9 @@ Su aplicación solo implementará el primer nivel (*Small Blind*) del juego.
 Su aplicación ha de incluir los mismos botones y textos que la aplicación de referencia, aunque no todos 
 esos botones y textos estarán dotados de funcionalidad o serán actualizados:
 * Bloque 1. Con cada jugada o descarte se actualizará el texto de la parte superior derecha con el número de cartas restantes en el mazo.
-* Bloque 2. Se mostrarán los *slots* vacíos con una apariencia que queda a su elección.
+* Bloque 2. Puesto que su aplicación no va a usar jokers ni utilizará la tienda, deje vacío ese bloque, aunque
+  debiera figurar en la aplicación.
+  Se mostrará como un bloque vacío delimitado por el marco de color azul que delimita todos los bloques.
 * Bloque 3. Se actualizará la información de objetivo y puntuación alcanzada.
 * Bloque 4. Se mostrarán las 8 cartas repartidas al inicio, que se resaltarán de algún modo que queda a
   su elección, al ser seleccionada por el usuario.
@@ -204,10 +244,10 @@ esos botones y textos estarán dotados de funcionalidad o serán actualizados:
 
 Posiblemente su aplicación necesitará métodos `hasPair()`, `hasTwopair()`, `hasThreeOfaKind()` etc. 
 que indican si la mano seleccionada por el jugador cumple o no el correspondiente criterio. 
-Asimismo necesitará un método que determine la clasificación 
-de mayor valor para una mano y establezca el valor de la mano (“chips”) en consecuencia. 
-Por ejemplo, una mano de 5 cartas podría contener un trío y un par; debería ser etiquetada como “Three of a
-kind” (trío) puesto que esa es la jugada de mayor valor.
+Asimismo necesitará un método que determine la clasificación de mayor valor para una mano y establezca 
+el valor de la mano (“chips”) en consecuencia. 
+Por ejemplo, una mano de 5 cartas podría contener un póker (*Four of a kind*) pero esa mano también contiene
+un trío. La mano debería ser etiquetada como “Four of a kind” puesto que esa es la jugada de mayor valor.
 
 Se da libertad al alumnado para implementar como crea oportuno aquellos comportamientos que no estén
 descritos en esta especificación o bien resulten difíciles de realizar como se hace en la aplicación de
