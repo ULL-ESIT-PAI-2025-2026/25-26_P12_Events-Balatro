@@ -60,6 +60,7 @@ de la baraja francesa que está dividida en cuatro palos (*suits*), dos de color
 * ♥ Hearts (corazones).
 * ♦ Diamonds (diamantes).
 * ♣ Clubs (tréboles).
+
 Cada palo está formado por 13 cartas, de las cuales 9 son numerales y 4 literales. 
 Se ordenan de menor a mayor “rango” de la siguiente forma: A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K. 
 Las cartas con letras (figuras), se llaman Jack (J), Queen (Q), King (K) y Ace (A, *As*).
@@ -71,14 +72,13 @@ El directorio `public/img/SVG-cards-1.3` de este proyecto contiene ficheros grá
 todas las cartas de la baraja francesa, que puede Ud. usar en su desarrollo.
 Siéntase libre de usar otras imágenes si lo prefiere.
 
-En cada turno el jugador puede descartar algunas cartas para robar nuevas o seleccionar hasta cinco 
+En cada turno de Balatro la jugadora puede descartar algunas cartas para robar nuevas o seleccionar hasta cinco 
 cartas para formar una 
-[mano de póker](https://en.wikipedia.org/wiki/List_of_poker_hands)
-(pareja, color, full, etc. o *One pair*, *Flush*, *Full House* de acuerdo a sus denominaciones en inglés). 
+[mano de póker](https://en.wikipedia.org/wiki/List_of_poker_hands).
 
 Las siguientes son las posibles manos en el póquer, en orden creciente de valor e indicando su correspondiente puntuación
 (“chips” y “multiplicador”) en el Balatro:
-* *High Card*: la carta de mayor valor numérico. Chips: 5 Mult: 1 
+* *High Card* (Carta más alta): la carta de mayor valor numérico. Chips: 5 Mult: 1 
 * *Pair* (Pareja): dos cartas con el mismo valor. Chips: 10 Mult: 2 
 * *Two Pair* (Doble par): dos pares de cartas con el mismo valor. Chips: 20 Mult: 2
 * *Three of a kind* (Trío): tres cartas con el mismo valor. Chips: 30 Mult: 3 
@@ -99,6 +99,7 @@ Si el juagador acaba sus manos sin alcanzar el objetivo, la partida termina.
 Utilice la aplicación
 [Mini Balatro](https://alu0101549491.github.io/TFG-Fabian-Gonzalez-Lence/3-MiniBalatro/)
 para jugar y sobre todo, conocer el juego.
+La aplicación contiene un enlace “How To Play” que explica la dinámica del juego.
 Mini Balatro está siendo desarrollada por D. Fabián G. Lence, estudiante del grado en informática en el marco
 de su Trabajo Fin de Grado.
 
@@ -106,7 +107,7 @@ En la aplicación el botón `Hand Info` muestra en pantalla los tipos de manos d
 valor de cada una de ellas, de modo que para empezar, basta con saber reconocer las jugadas básicas de póker 
 y tratar de hacer siempre la mano más valiosa con las cartas que se tiene.
 
-En esta práctica se propone desarrollar en Vanilla TypeScript una primera aproximación simplificada del Blatro a través de una
+En esta práctica se propone desarrollar en Vanilla TypeScript una aproximación simplificada de Blatro a través de una
 aplicación web en formato SPA (*Single Page Application*) conforme al patrón MVC.
 
 ### Indicaciones de caracter general
