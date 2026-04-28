@@ -154,8 +154,9 @@ Cuando finalice su aplicación, utilice
 [Lucidchart](https://www.lucidchart.com/pages) o cualquier otra herramienta que conozca para trasladar sus
 diseños en papel a un diagrama en formato digital que pueda mostrar a través de una web.
 
-La visualización de la ejecución del programa y su interfaz gráfica se desarrollará a través de una página web alojada
-en la máquina IaaS-ULL de la asignatura (puede utilizar también si lo desea la extensión *Live View* de VSC).
+La visualización de la ejecución del programa y su interfaz gráfica se desarrollará a través de una
+[GitHub Page](https://pages.github.com/)
+asociada con el repositorio de su proyecto.
 
 Configure en el directorio `/public` de su práctica, la página `index.html`, 
 que servirá de "página índice" tanto para su aplicación como para los ejercicios de la sesión de evaluación.
